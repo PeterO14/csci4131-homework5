@@ -1,0 +1,46 @@
+extends navigation.pug
+
+block link
+    link(href='css/myStyle.css' rel='stylesheet')
+    link(href='css/contactLog.css' rel='stylesheet')
+
+block title 
+    title Contact Log
+
+block content
+    h1.page-header Messages
+
+    if contact_log.length == 0
+        div.error-msg
+            p.em-text
+                | I couldn't find any messages!
+
+    form.filter(action='/contactLog' method='get')
+        fieldset.filter-options
+            input#all(type='radio' name='filter' value='all')
+            label(for='all') All
+            input#question(type='radio' name='filter' value='question')
+            label(for='question') Question
+            input#comment(type='radio' name='filter' value='comment')
+            label(for='comment') Comment
+            input#concern(type='radio' name='filter' value='concern')
+            label(for='concern') Concern
+        br
+        button.filter-btn Filter
+
+    table.contact-log
+        tr
+            th.head From 
+            th.head Title 
+            th.head Category 
+            th.head Message
+
+        each log in contact_log
+            tr
+                td.data
+                    a(href=log.link)= log.username 
+                    br
+                    a(href=`mailto:${log.email}`)= log.email
+                td.data= log.title 
+                td.data=  log.message_category 
+                td.data= log.note

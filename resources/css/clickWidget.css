@@ -1,0 +1,31 @@
+.clicker-Widget {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.clicker-header {
+    text-align: center;
+    background-color: #1C6758;
+    border: 2px solid;
+    border-radius: 1rem;
+    width: 40rem;
+}
+
+.header-text {
+    font-size: 1.75rem;
+    padding: 0.5rem;
+}
+
+.clicker-body {
+    background-color: #3D8361;
+    border: 2px solid;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+#clicker {
+    font-size: 2rem;
+    margin: 4rem;
+    border: 2px solid;
+    border-radius: 1rem;
+}

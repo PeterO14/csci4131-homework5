@@ -1,0 +1,90 @@
+extends navigation.pug
+
+block script
+    script(defer='' src='js/myContacts.js')
+
+block title
+    title Contacts
+
+block content
+    h1.contactsHeader Most Notable Contacts
+    
+    div.contactsContainer
+        table.contactsTable
+            tr.row1
+                th.tableHeadName Name
+                th.tableHeadLocation Location
+                th.tableHeadInfo Contact Information
+                th.tableHeadEmail Email
+                th.tableHeadWeb Website
+
+            tr.row2
+                td.name Bilbo Baggins
+                td.location
+                    p.address 
+                        | 1 Bagshot Row 
+                        br 
+                        | Hobbiton Hill, The Shire
+                    img.image(src='images/theshire.jpeg' alt='The Shire')
+                td.info Family friend
+                td.email
+                    a(href='mailto:b.baggins@gmail.com') crazy.baggins@gmail.com
+                td.web
+                    a(href='https://lotr.fandom.com/wiki/Bilbo_Baggins') The Bilbo Baggins
+            
+            tr.row3
+                td.name Harry Potter
+                td.location
+                    p.address
+                        | 4 Privet Drive
+                        br
+                        | Little Whinging, Surrey
+                    img.image(src='images/hogwarts.jpeg' alt='Hogwarts')
+                td.info Wizard
+                td.email
+                    a(href='mailto:h.potter@gmail.com') mr.potter@gmail.com
+                td.web
+                    a(href='https://en.wikipedia.org/wiki/Harry_Potter') A Man Named Harry Potter
+            tr.row4
+                td.name Daenerys Targaryen
+                td.location
+                    p.address
+                        | 56 Dragons End
+                        br
+                        | Kings Landing, Westeros
+                    img.image(src='images/westeros.jpeg' alt='Westeros')
+                td.info Daenerys Stormborn of House Targaryen
+                td.email
+                    a(href='mailto:d.targaryen@gmail.com') queen.targaryen@gmail.com
+                td.web
+                    a(href='https://gameofthrones.fandom.com/wiki/Daenerys_Targaryen') Powerful, Daenerys Targaryen
+            
+            tr.row5
+                td.name William Mandella
+                td.location
+                    p.address
+                        | 1111 16th Ave SE
+                        br
+                        | Minneapolis, MN 55414
+                    img.image(src='images/mpls.jpeg' alt='Minneapolis')
+                td.info Soldier in the Tauran War
+                td.email
+                    a(href='mailto:w.mandella@gmail.com') soldier.mandella@gmail.com
+                td.web
+                    a(href='https://en-academic.com/dic.nsf/enwiki/221159') Space Pioneer, William Mandella
+
+            tr.row6
+                td.name Jessica Atriedes
+                td.location
+                    p.address
+                        | 23 Desert Ln
+                        br
+                        | Dune, Arakis
+                    img.image(src='images/arrakis.jpeg' alt='Arrakis')
+                td.info Bene Gesserit
+                td.email
+                    a(href='mailto:j.atriedes@gmail.com') datway.atriedes@gmail.com
+                td.web
+                    a(href='https://dune.fandom.com/wiki/Jessica_Atreides') First A Mother, Jessica Atriedes
+                    
+        img.contactsImage(src='images/contacts.png' alt='Contacts Blank')

@@ -1,0 +1,20 @@
+extends navigation.pug
+
+block title
+    title Login
+
+block content 
+    h1.login-header Login?
+
+    form.login-box(action='/login' method='post')
+
+        div
+            label(for='username') Username: 
+            input(type='text' name='username' required id='username')
+
+        div
+            label(for='password') Password: 
+            input(type='password' name='password' required id='password')
+
+        div 
+            button Login

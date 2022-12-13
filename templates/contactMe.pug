@@ -1,0 +1,65 @@
+extends navigation.pug 
+    
+block script
+    script(defer='' src='js/contactMe.js')
+
+block title 
+    title Contact Me
+
+block content 
+    h1.page-head Leave Me a Message!
+
+    if table_updated
+        div.msg-received
+            p.mr-text
+                | Your message has been received!
+
+    div.contactMeContainer
+        h1.contactMeHeader Contact Me
+        form.contactForm(action='/contactMe' method='post')
+            p Required fields are marked with *
+            label(for='postTitle') Title: *
+            br
+            input#postTitle(type='text' name='postTitle' required='required')
+            br
+            br
+            label(for='email') Email: *
+            br
+            input#email(type='text' name='email' pattern='^[A-Za-z0-9]+@umn\.edu$' required='required')
+            br
+            br
+            label(for='username') Username: *
+            br
+            input#username(type='text' name='username' required='required')
+            br
+            br
+            label(for='link') Link: *
+            br
+            input#link(type='text' name='link' pattern='^[a-z0-9]+:\/\/')
+            br
+            br
+            
+            div.messageBox
+                fieldset.contactMeFieldset(required='')
+                    legend Category of Message: *
+                    div
+                        input#question(type='radio' name='category' value='question')
+                        label(for='question') Question
+                    div
+                        input#comment(type='radio' name='category' value='comment')
+                        label(for='comment') Comment
+                    div
+                        input#concern(type='radio' name='category' value='concern')
+                        label(for='concern') Concern
+                
+                div.concernInfo
+                    p.concernMsg
+                        | In order to best address your concern, please make sure to list the specific way in which I have wronged you.
+                br
+                
+            label(for='message') Message: *
+            br
+            textarea#message(name='message' required='')
+            br
+            br
+            button Submit

@@ -1,0 +1,11 @@
+extends navigation.pug
+
+block title
+    title Logout
+
+block content 
+    h1.login-header Logout?
+
+    form.login-box(action='/logout' method='post')
+
+        button Logout

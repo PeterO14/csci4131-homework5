@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+    head
+
+        block link
+            link(href='css/myStyle.css' rel='stylesheet')
+
+        block script
+
+        meta(charset='UTF-8')
+
+        block title
+            title My About Me
+
+        body.generalPage
+            nav.navbar
+                ul.navitem
+                    li.navlink
+                        a.link(href='myAboutMe') About Me
+                    li.navlink
+                        a.link(href='myContacts') My Contacts
+                    li.navlink
+                        a.link(href='myWidgets') My Widgets
+                    li.navlink
+                        a.link(href='contactMe') Contact Me
+                    li.navlink 
+                        a.link(href='contactLog') Contact Log
+                    li.navlink 
+                        a.link(href='login') #{username}
+                    
+            block content

@@ -1,0 +1,64 @@
+.page-header {
+    font-size: 3rem;
+    font-family: Sega Logo Font;
+    text-align: center;
+    margin: 2rem;
+}
+
+.error-msg {
+    border: 4px solid;
+    border-color: #ac0000;
+    border-radius: 1rem;
+    width: 20rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.em-text {
+    text-align: center;
+    padding: 1rem;
+}
+
+.filter {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.filter-options {
+    display: inline;
+    background: #3D8361;
+    border: 2px solid;
+}
+
+.filter-btn {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    border: 2px solid;
+    border-radius: 1rem;
+}
+
+.contact-log {
+    border: 2px solid;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-top: 2rem;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.head {
+    border: 2px solid;
+    border-collapse: collapse;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+}
+
+.data {
+    border: 2px solid;
+    border-collapse: collapse;
+    padding: 0.5rem;
+    white-space: pre-line;
+}
+
+tr:nth-child(odd) {background: #3D8361}
+tr:nth-child(even) {background: #1C6758}

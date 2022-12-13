@@ -1,0 +1,31 @@
+.weather-coords {
+    font-size: 1.25rem;
+}
+
+#latitude-input {
+    font-size: 1.25rem;
+    width: 15rem;
+    text-align: left;
+}
+
+#longitude-input {
+    font-size: 1.25rem;
+    width: 15rem;
+    text-align: left;
+}
+
+#find-me {
+    margin: 1.5rem;
+}
+
+#get-weather-btn {
+    margin: 1.5rem;
+}
+
+#legal {
+    margin-bottom: 1.5rem;
+}
+
+#weatherContainer input {
+    width: 5em;
+}

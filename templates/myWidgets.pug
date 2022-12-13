@@ -1,0 +1,76 @@
+extends navigation.pug
+
+block link
+    link(href='css/myStyle.css' rel='stylesheet')
+    link(href='css/weatherWidget.css' rel='stylesheet')
+    link(href='css/clickWidget.css' rel='stylesheet')
+
+block script
+    script(async='' defer='' src='js/weatherWidget.js')
+    script(async='' defer='' src='js/passwordWidget.js')
+    script(async='' defer='' src='js/timeWidget.js')
+    script(async='' defer='' src='js/clickWidget.js')
+
+block title
+    title Widgets
+
+block content 
+    h1.widgetsHeader Checkout My Widgets
+    
+    div.widgetContainer
+        div.widget
+            iframe(width='560' height='315' src='https://www.youtube.com/embed/g0rhN8U14dk' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; \
+            gyroscope; picture-in-picture' allowfullscreen='')
+
+        div.widget
+            blockquote.twitter-tweet
+                p(lang='en' dir='ltr')
+                    | Europeans phone numbers are all, like, +65 00066 82 31687 0 9865 05 0 0. Come on. Get real.
+                | &mdash; willy &#x1F31C;&#x1F4A7; (@willystaley) 
+                a(href='https://twitter.com/willystaley/status/1555357047419437056?ref_src=twsrc%5Etfw') August 5, 2022
+                script(async='' src='https://platform.twitter.com/widgets.js' charset='utf-8')
+    
+    div.widgetContainer
+        div.widget
+            div.widgetHeader
+                div.widgetHeadText Password Strength Checking with JS
+            div.widgetContent
+                form.register
+                    label.registerLabel(for='password') Password: 
+                    input#password.registerInput(name='password' type='password' placeholder='Type Your Password here')
+                    span#pwdresult
+        
+        div.widget
+            div.widgetHeader
+                div.widgetHeadText Time Until The End of The Semester
+            div.widgetContent
+                span#timeResult.timeLeft
+
+    div.widgetContainer
+        div.widget
+            div.widgetHeader
+                div.widgetHeadText Weather
+            div.widgetContent
+                p#weatherStatus
+                div
+                    span.weather-coords Coordinates:
+                    input#latitude-input(type='text' placeholder='Latitude')
+                    input#longitude-input(type='text' placeholder='Longitude')
+                div
+                    button#find-me(type='button') Auto-Find me!
+                    button#get-weather-btn(type='button') Find The Weather!
+                div#weatherOutput
+                    p#temp-display
+                    p#cloud-cover-display
+                    p#sunrise-display
+                    p#sunset-display
+                // Interesting fact. We're legally required to put this here.
+                div#legal
+                    a(href='https://open-meteo.com/') Weather data by Open-Meteo.com
+                    a(href='https://sunrise-sunset.org/') Sunrise and sunset data by sunrise-sunset.org
+
+        div.clicker-Widget
+            div.clicker-header 
+                div.header-text Click Counter 
+            div.clicker-body 
+                button#clicker What
